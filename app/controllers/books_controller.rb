@@ -11,4 +11,17 @@ class BooksController < ApplicationController
 
   def edit
   end
+
+  def create
+    book = Book.new(book_params)
+    book.save
+    redirect_to 'show'
+  end
+
+  private
+  #ストロングパラメータ
+  def book_params
+    params.require(:book).permit(:title, :body)
+  end
+
 end
