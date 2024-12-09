@@ -4,6 +4,7 @@ class BooksController < ApplicationController
   end
 
   def index
+    @books = Book.all
   end
 
   def show
@@ -11,6 +12,9 @@ class BooksController < ApplicationController
 
   def edit
   end
+
+  def destroy
+  def
 
   def create
     book = Book.new(book_params)

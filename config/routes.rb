@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :books
   get 'books/new'
   post 'books' => 'books#create'
   get 'books/index'
