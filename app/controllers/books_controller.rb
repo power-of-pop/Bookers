@@ -14,6 +14,9 @@ class BooksController < ApplicationController
   end
 
   def destroy
+    book = Book.find(params[:id])
+    list.destroy
+    redirect_to '/books'
   end
 
   def create
