@@ -13,13 +13,10 @@ class BooksController < ApplicationController
   def edit
   end
 
-  def destroy
-  def
-
   def create
     book = Book.new(book_params)
     book.save
-    redirect_to 'show'
+    redirect_to book_path(book.id)
   end
 
   private
