@@ -13,6 +13,9 @@ class BooksController < ApplicationController
   def edit
   end
 
+  def destroy
+  end
+
   def create
     book = Book.new(book_params)
     book.save

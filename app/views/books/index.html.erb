@@ -3,8 +3,13 @@
 
 <% @books.each do |book| %>
 
-  <p>title<p>
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+    </tr>
   <span><%= book.title %></span>
+  </table>
 
 <% end %>
 
