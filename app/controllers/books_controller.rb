@@ -8,9 +8,12 @@ class BooksController < ApplicationController
   end
 
   def show
+    @books = Book.all
   end
 
   def edit
+    @book = Book.find(params[:id])
+    @book.update(book_params)
   end
 
   def destroy
